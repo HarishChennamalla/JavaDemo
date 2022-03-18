@@ -7,14 +7,15 @@ pipeline
     }
     stages
     {
-        stage('checkout')
+        stages('Welcome')
         {
             steps
             {
-                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/HarishChennamalla/java_repo.git']]])
+                sh '''
+                echo Welcome to multi branch pipeline
+                '''
             }
- 
-        }
+        }    
         stage('Build')
         {
             steps
