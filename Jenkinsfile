@@ -7,7 +7,7 @@ pipeline
     }
     stages
     {
-        stages('Welcome')
+        stage('Welcome')
         {
             steps
             {
